@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الخدمة</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #service-title {
+            text-align: center;
+            color: #1E2A38;
+    }
+    </style>
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، أريد طلب ${quantity} من كتب: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249903946264?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img style="height: 370px;" src="Books/img/Asrar.jpg" alt="صورة الخدمة">
+            <h2 id="service-title"> كتاب أسرار عقل المليونير </h2>
+            <p class="description"> 
+                    <p>
+يُعتبر كتاب <strong>أسرار عقل المليونير</strong> دليلًا عمليًا لفهم طريقة تفكير الأغنياء وكيفية بناء عقلية مالية ناجحة. يشرح إيكر كيف أن معتقداتك الداخلية تجاه المال تؤثر بشكل مباشر على واقعك المالي، ويقدم خطوات واضحة لإعادة برمجة هذه المعتقدات. يعتمد الكتاب على تجاربه الشخصية ويجمع بين النصائح النفسية والمالية لتساعدك على الوصول إلى الحرية المالية وتحقيق الثراء بثقة.
+</p>
+              
+              <table>
+    <tr>
+        <th>المواصفات</th>
+        <th>التفاصيل</th>
+    </tr>
+    <tr>
+        <td><strong>اسم المؤلف</strong></td>
+        <td>تي. هارف إيكر</td>
+    </tr>
+    <tr>
+        <td><strong>سنة إصدار الكتاب</strong></td>
+        <td>2005</td>
+    </tr>
+    <tr>
+        <td><strong>الدولة المنتشر منها الكتاب</strong></td>
+        <td>الولايات المتحدة الأمريكية</td>
+    </tr>
+    <tr>
+        <td><strong>لغة الكتاب</strong></td>
+        <td>الإنجليزية (ومُترجم للعربية)</td>
+    </tr>
+    <tr>
+        <td><strong>عدد الصفحات</strong></td>
+        <td>231 صفحات </td>
+    </tr>
+    <tr>
+        <td><strong>فئة الكتاب</strong></td>
+        <td>إدارة مالية / تنمية شخصية</td>
+    </tr>
+    <tr>
+        <td><strong>السعر بالجنيه السوداني</strong></td>
+        <td>10,000 جنيه سوداني فقط</td>
+    </tr>
+    <tr>
+        <td><strong>السعر بالدولار</strong></td>
+        <td>5$</td>
+    </tr>
+</table>
+
+☎️للطلب المباشر اضغط هنا 👇🏽
+              <br />
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد حبات الكتب المطلوبة ( تبدا من 1 )</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249903946264" target="_blank" class="whatsapp-btn">
+                طلب الكتاب عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

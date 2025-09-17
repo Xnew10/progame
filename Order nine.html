@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الخدمة</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، أريد طلب ${quantity} من خدمة: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249118422860?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img src="img/Order nine/img.jpg" alt="صورة الخدمة">
+            <h2 id="service-title">تجديد إقامة الكوارث الإماراتية</h2>
+            <p class="description">متوفرة خدمة تجديد إقامة الكوارث بالنسبة لدولة الإمارات في المناطق التالية: أبوظبي، الشارقة، العين
+              <br />
+              <br />
+           
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد الخدمات المطلوبة:</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249118422860" target="_blank" class="whatsapp-btn">
+                طلب الخدمة عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

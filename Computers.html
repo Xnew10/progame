@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="موقع خدمتي يقدم خدمات مميزة مثل تحميل الفيديوهات، الترجمة، تصميم المواقع والمزيد.">
+<meta name="keywords" content="خدمات, تحميل فيديوهات, ترجمة, تصميم مواقع, تحويل النص إلى صوت">
+<meta name="author" content="Hassan Attallah Hassan">
+    
+    <title>خدمتي - أفضل الخدمات الرقمية بين يديك</title>
+    
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="Style2.css">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="خدمتي " />
+    <meta property="og:description" content="حيث تلتقي الخدمة بالكفاءة" />
+    <meta property="og:image" content="img/logo.jpg" />
+    
+    
+
+</head>
+<body>
+    
+    
+
+    <header>
+        <div class="hero">
+            <h1>خدمتي</h1>
+            <p> سهولة، سرعة، وثقة</p>
+        </div>
+    </header>
+
+    <section id="profile">
+    <img src="img/pro.jpg" alt="صورة شخصية">
+    <h2>Hassan Attallah Hassan</h2>
+    <p>📞 واتساب: <a href="https://wa.me/249118422860" target="_blank">+249118422860</a></p>
+    <p>📞 اتصال مباشر: +249118422860</p>
+</section>
+    
+    <button onclick="goToPage('index.html')">الصفحة الرئيسية</button>
+<button onclick="goToPage('phones.html')">الهواتف الذكية</button>
+
+<script>
+    function goToPage(page) {
+        window.location.href = page;
+    }
+</script>
+
+        <section class="services">
+            
+    <h2>خدماتنا</h2>
+            <p>إختر هاتفك</p>
+
+    <div class="service-list">
+        <div class="service">
+            <a href="Order three.html">
+                <img src="phones/S24 Ultra.jpeg" alt="تحميل الفيديوهات">
+                <h3>Realme S24 Ultra</h3>
+                <p>الرسالة الثانية، جهاز فيتنامي، ذاكرة 256 جيجا ، و رام 8 جيجا رام </p>
+                <p class="price">السعر : 170,000 جنيه سوداني</p>
+            </a>
+        </div>
+
+        <div class="service">
+            <a href="Order four.html">
+                <img src="img/Order four/img1.jpg" alt="ترجمة الملفات">
+                <h3>ترجمة الملفات بشكل احترافي</h3>
+                <p>ترجمة الملفات بين العربية والإنجليزية بدقة عالية.</p>
+                <p class="price">السعر المبدئي: 10,000 جنيه سوداني</p>
+            </a>
+        </div>
+
+       <div class="service">
+            <a href="Order five.html">
+                <img src="img/Order five/img.png" alt="تحويل النص إلى صوت">
+                <h3>تحويل النص إلى صوت (MP3)</h3>
+                <p>تحويل النصوص العربية والإنجليزية إلى ملفات صوتية بجودة عالية.</p>
+                <p class="price">السعر المبدئي: 10,000 جنيه سوداني</p>
+            </a>
+        </div>
+
+        <div class="service">
+            <a href="Order one.html">
+                <img src="img/Order one/img.jpg" alt="تحويل PDF إلى Word">
+                <h3>تحويل PDF إلى Word</h3>
+                <p>تفريغ الملفات من PDF إلى Word باحترافية عالية.</p>
+                <p class="price">السعر المبدئي: 15,000 جنيه سوداني</p>
+            </a>
+        </div>
+
+       
+                 
+    </div>
+</section>
+    
+    
+    
+      <section id="testimonials">
+    <h2>آراء عملائنا</h2>
+    <div id="testimonial-box">
+        <p id="testimonial-text">"خدمة ممتازة وسريعة جدًا، أنصح الجميع بالتجربة!"</p>
+        <h4 id="testimonial-author">- أحمد علي</h4>
+    </div>
+</section>
+    
+    <section id="add-review">
+    <h2>أضف رأيك</h2>
+    <textarea id="review-text" placeholder="اكتب رأيك هنا..."></textarea>
+    <input type="text" id="review-author" placeholder="اسمك">
+    <select id="review-rating">
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+    </select>
+    <button onclick="addReview()">إرسال</button>
+</section>
+
+<section id="user-reviews">
+    <h2>آراء العملاء</h2>
+    <div id="reviews-list"></div>
+</section>
+    
+    <script>
+    function addReview() {
+        let text = document.getElementById("review-text").value;
+        let author = document.getElementById("review-author").value;
+        let rating = document.getElementById("review-rating").value;
+
+        if (text === "" || author === "") {
+            alert("يرجى ملء جميع الحقول!");
+            return;
+        }
+
+        let review = { text, author, rating };
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+
+        displayReviews();
+        document.getElementById("review-text").value = "";
+        document.getElementById("review-author").value = "";
+    }
+
+    function displayReviews() {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        let reviewsList = document.getElementById("reviews-list");
+        reviewsList.innerHTML = "";
+
+        reviews.forEach(review => {
+            let reviewBox = document.createElement("div");
+            reviewBox.className = "review-box";
+            reviewBox.innerHTML = `<p>${review.text}</p><h4>${review.author} ${review.rating}</h4>`;
+            reviewsList.appendChild(reviewBox);
+        });
+    }
+
+    window.onload = displayReviews;
+</script>
+    
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 | خدمتي</p>
+        <!-- <p><a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p> -->
+    </footer>
+
+<button onclick="topFunction()" id="topBtn" title="الرجوع للأعلى">⬆</button>
+<script>
+  let mybutton = document.getElementById("topBtn");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<script>
+    const testimonials = [
+        { text: "خدمة ممتازة وسريعة جدًا، أنصح الجميع بالتجربة!", author: "- أحمد علي" },
+        { text: "أسعار مناسبة وخدمة احترافية، سأتعامل معهم مجددًا!", author: "- فاطمة محمد" },
+        { text: "تعامل رائع وسرعة في التنفيذ، شكرًا لكم!", author: "- خالد محمود" },
+        { text: "موقع رائع وسهل الاستخدام، أوصي به!", author: "- ليلى أحمد" }
+    ];
+
+    let index = 0;
+    function changeTestimonial() {
+        index = (index + 1) % testimonials.length;
+        document.getElementById("testimonial-text").textContent = testimonials[index].text;
+        document.getElementById("testimonial-author").textContent = testimonials[index].author;
+    }
+
+    setInterval(changeTestimonial, 6000); // تغيير الرأي كل 5 ثوانٍ
+</script>
+
+<script>
+    document.body.classList.add("page-transition");
+
+    function goToPage(page) {
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+            window.location.href = page;
+        }, 500);
+    }
+
+    window.onload = () => {
+        document.body.style.opacity = "1";
+    };
+</script>
+
+<script type='text/javascript' src='//pl25871410.effectiveratecpm.com/d5/cc/fd/d5ccfd45ab394d52df99d85c422b4dcf.js'></script>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '7d5c2a105fc6bd724991d9d48ea4446a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 628,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/7d5c2a105fc6bd724991d9d48ea4446a/invoke.js"></script>
+
+<script async="async" data-cfasync="false" src="//pl25895850.effectiveratecpm.com/0c0c9a1eb6af78214ff2f03316c2134c/invoke.js"></script>
+<div id="container-0c0c9a1eb6af78214ff2f03316c2134c"></div>
+
+</body>
+</html>

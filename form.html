@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="موقع Tech Boys هو منصة متكاملة لخدمات رقمية متنوّعة تشمل: تحميل الفيديوهات من الإنترنت، ترجمة النصوص والملفات، تحويل النص إلى صوت (TTS)، تصميم وتطوير المواقع، أدوات التعامل مع الوسائط، والعديد من الخدمات الرقمية المفيدة.">
+	
+<meta name="keywords" content="Tech Boys, خدمات رقمية, تحميل فيديو, تحميل من يوتيوب, ترجمة نصوص, ترجمة ملفات، تصميم مواقع، تطوير مواقع، تحويل النص إلى صوت، أدوات وسائط، TTS، تحويل فيديو، تحرير فيديو، أدوات ترجمة، أدوات تحويل نص، تنزيل فيديوهات من الانترنت">
+	
+	<meta name="author" content="Tech Boys">
+    
+    <title>Sing in</title>
+    
+    <link rel="icon" href="img/img.webp">
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Tech Boys" />
+    <meta property="og:description" content=" الابتكار بأسلوب عصري " />
+    <meta property="og:image" content="img/img.webp" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+  background: linear-gradient(to right, #F8FAFC, #E2E8F0);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+    .login-container {
+  direction: rtl; /* لتنسيق النص العربي */
+  text-align: right;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.form-control {
+  font-size: 1rem;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.bottom-text {
+  font-size: 0.9rem;
+}
+
+/* تحسين العلامة المائية */
+.background-shapes .shape {
+  opacity: 0.1;
+}
+
+    .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .social-login button {
+      flex: 1;
+      margin: 0 5px;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      background: white;
+      color: #000;
+    }
+
+    .background-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      filter: blur(20px);
+    }
+
+    .bottom-text a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+  .bottom-text a:hover{
+    color: red;
+  }
+  </style>
+
+<style>
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(to right, #F8FAFC, #E2E8F0);
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: #1E3A8A;
+  font-weight: 700;
+}
+
+.card-text {
+  color: #4B5563;
+  font-size: 1rem;
+}
+
+.card-price {
+  color: #F97316;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+  .category-box {
+      min-width: 140px;
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      margin-left: 1rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .category-box:hover {
+      background-color: #e9ecef;
+      cursor: pointer;
+    }
+
+    .category-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .scrolling-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 1rem;
+    }
+
+    .scrolling-wrapper::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .scrolling-wrapper::-webkit-scrollbar-thumb {
+      background-color: #dee2e6;
+      border-radius: 10px;
+    }
+
+    a.category-box {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+    }
+</style>
+    
+    <style>
+.testimonial-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.testimonial {
+  animation: fade 1s ease-in-out;
+}
+  
+ .dropdown-menu{
+  text-align: right !important;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stars {
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+.name {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+   .footer {
+      background-color: #1a1d20;
+      color: #adb5bd;
+      padding: 2rem 1rem;
+    }
+    .footer a {
+      color: #adb5bd;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer hr {
+      border-top: 1px solid #343a40;
+    }
+</style>
+
+</head>
+<body>
+    
+  <nav style="background: linear-gradient(to right, #0d6efd 45%, #FFFFFF);" class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/img.webp" alt="Logo" width="30" height="30" style="border-radius: 50%;" class="d-inline-block align-text-top">
+      Tech Boys
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="phones.html">الهواتف الذكية</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            خدمات آخرى
+          </a>
+          <ul class="dropdown-menu" >
+            <li><a class="dropdown-item" href="books.html">الكتب الرقمية</a></li>
+            <li><a class="dropdown-item" href="#">شحن الالعاب</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">تسجيل / تسجيل دخول </a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">تواصل معنا</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="بحث.." aria-label="Search"/>
+        <button class="btn btn-outline-light" type="submit">ابحث</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  
+  
+  <!-- المحتوى بعد النافبار مباشرة -->
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="login-container text-center">
+    <h2 class="mb-4">Tech Boys Login</h2>
+    <form>
+      <div class="mb-3 text-start">
+  <label for="email" class="form-label">: Email</label>
+  <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+</div>
+
+<div class="mb-3 text-start">
+  <label for="password" class="form-label">: Password</label>
+  <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+</div>
+      <div class="mb-2 text-start">
+        <a href="#" style="text-decoration: none;" class="text-black">?Forgot Password</a>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Sign in</button>
+    </form>
+
+    <div class="bottom-text mt-4">
+      Don't have an account? <a href="singin.html">Register free</a>
+    </div>
+  </div>
+</div>
+       
+</section>
+
+      <footer style="background: linear-gradient(to right, #0d6efd 45%, #FFFFFF);" class="footer text-center mt-3">
+    <div class="container">
+      <hr class="mb-4">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+        <p class="mb-2 mb-sm-0">© 2025 Tech Boys</p>
+        <a href="#"><img style="border-radius: 50%;" src="img/img.webp" alt="..." width="24" height="24"></a>
+        <ul class="list-unstyled d-flex mb-0">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="#">من نحن</a></li>
+          <li><a href="#">الدعم و المساعدة</a></li>
+          <li><a href="#Order-list">تسوق حسب الأقساب</a></li>
+          <li><a href="#">القواعد</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+<button onclick="topFunction()" id="topBtn" title="الرجوع للأعلى">⬆</button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
+<script>
+  let mybutton = document.getElementById("topBtn");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+<script>
+    document.body.classList.add("page-transition");
+
+    function goToPage(page) {
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+            window.location.href = page;
+        }, 500);
+    }
+
+    window.onload = () => {
+        document.body.style.opacity = "1";
+    };
+</script>
+
+<script type='text/javascript' src='//pl25871410.effectiveratecpm.com/d5/cc/fd/d5ccfd45ab394d52df99d85c422b4dcf.js'></script>
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '7d5c2a105fc6bd724991d9d48ea4446a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 628,
+		'params' : {}
+	};
+</script>
+<script>
+const testimonials = [
+  { name: "محمد", rating: 5, text: "موقع رائع وسهل الاستخدام!" },
+  { name: "أحمد", rating: 4, text: "الخدمات ممتازة وسريعة." },
+  { name: "سارة", rating: 5, text: "أنصح به للجميع!" },
+  { name: "ليلى", rating: 4, text: "التصميم أنيق جداً." },
+  { name: "يوسف", rating: 5, text: "فكرة مبتكرة وخدمة رائعة." },
+  { name: "خالد", rating: 5, text: "دعم فني ممتاز وسريع." },
+  { name: "نورا", rating: 4, text: "تعامل راقٍ ومحترف." },
+  { name: "عمرو", rating: 5, text: "أفضل تجربة لي حتى الآن!" },
+  { name: "هدى", rating: 5, text: "موقع يستحق التجربة فعلاً." },
+  { name: "بشير", rating: 4, text: "سهل وبسيط ومفيد جداً." }
+];
+
+let index = 0;
+
+function updateTestimonial() {
+  const t = testimonials[index];
+  const stars = "★".repeat(t.rating) + "☆".repeat(5 - t.rating);
+  const html = `
+    <div class="testimonial">
+      <div class="stars">${stars}</div>
+      <div class="text">"${t.text}"</div>
+      <div class="name">– ${t.name}</div>
+    </div>
+  `;
+  document.getElementById("testimonial-content").innerHTML = html;
+  index = (index + 1) % testimonials.length;
+}
+
+// أول تعليق فوراً
+updateTestimonial();
+// تغيير كل 6 ثواني
+setInterval(updateTestimonial, 6000);
+</script>
+</body>
+</html>

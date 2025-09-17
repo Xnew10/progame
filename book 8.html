@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الكتاب</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #service-title {
+            text-align: center;
+            color: #1E2A38;
+    }
+    </style>
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، من طرف Tech-boys أريد طلب ${quantity} من كتب: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249111002399?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img style="height: 370px;" src="Books/img/Win.jpg" alt="صورة الخدمة">
+            <h2 id="service-title"> استغل هاتفك و أكسب المال من إنستجرام </h2>
+            <p class="description"> 
+                    <p>
+يقدم كتاب <strong>استغل هاتفك و أكسب المال من إنستجرام</strong> دليلًا عمليًا ومباشرًا لأي شخص يرغب في تحويل وقته على إنستجرام إلى مصدر دخل حقيقي. يشرح المؤلف بأسلوب بسيط كيف تبني جمهورك، تنشئ محتوى مؤثر، وتستخدم استراتيجيات التسويق الرقمي لتحقيق الأرباح. مناسب للمبتدئين وأصحاب المشاريع الصغيرة وكل من يسعى للاستفادة من الهاتف والإنترنت بطريقة ذكية ومربحة.
+</p>
+              <table>
+    <tr>
+        <th>المواصفات</th>
+        <th>التفاصيل</th>
+    </tr>
+    <tr>
+        <td><strong>اسم المؤلف</strong></td>
+        <td>أبوبكر علاء الدين</td>
+    </tr>
+    <tr>
+        <td><strong>سنة إصدار الكتاب</strong></td>
+        <td>2024</td>
+    </tr>
+    <tr>
+        <td><strong>الدولة المنتشر منها الكتاب</strong></td>
+        <td>السودان</td>
+    </tr>
+    <tr>
+        <td><strong>لغة الكتاب</strong></td>
+        <td>العربية</td>
+    </tr>
+    <tr>
+        <td><strong>عدد الصفحات</strong></td>
+        <td>87 صفحة</td>
+    </tr>
+    <tr>
+        <td><strong>فئة الكتاب</strong></td>
+        <td>تسويق إلكتروني / ربح من الإنترنت</td>
+    </tr>
+    <tr>
+        <td><strong>السعر بالجنيه السوداني</strong></td>
+        <td>20,000 جنيه سوداني فقط</td>
+    </tr>
+    <tr>
+        <td><strong>السعر بالدولار</strong></td>
+        <td>10$</td>
+    </tr>
+</table>
+
+☎️للطلب المباشر اضغط هنا 👇🏽
+              <br />
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد حبات الكتب المطلوبة ( تبدا من 1 )</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249111002399" target="_blank" class="whatsapp-btn">
+                طلب الكتاب عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

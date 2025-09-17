@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب Redmi A3x</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    #service-title {
+            text-align: center;
+            color: #1E2A38;
+    }
+        #whatsapp-button{
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، أريد طلب ${quantity} من هواتف: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249903946264?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img src="phones/redmiA3x.png" alt="صورة الخدمة">
+            <h2 id="service-title"> Redmi A3x </h2>
+            <p class="description">  <table>
+            <tr>
+                <th>المواصفة</th>
+                <th>التفاصيل</th>
+            </tr>
+            <tr>
+                <td>الشاشة</td>
+                <td>IPS LCD بحجم 6.71 بوصة، دقة 720 × 1650 بكسل، معدل تحديث 90 هرتز، محمية بزجاج Gorilla Glass 3</td>
+            </tr>
+            <tr>
+                <td>المعالج</td>
+                <td>Unisoc T603 (ثماني النواة حتى 1.8 جيجاهرتز)، معالج رسومي Mali-G52 MC2</td>
+            </tr>
+            <tr>
+                <td>الذاكرة والتخزين</td>
+                <td>RAM: 3 أو 4 جيجابايت، تخزين داخلي: 64 أو 128 جيجابايت، يدعم microSDXC حتى 1 تيرابايت</td>
+            </tr>
+            <tr>
+                <td>الكاميرا الخلفية</td>
+                <td>عدسة رئيسية 8 ميجابكسل (f/2.0)، عدسة مساعدة 0.08 ميجابكسل، دعم تصوير 1080p@30fps</td>
+            </tr>
+            <tr>
+                <td>الكاميرا الأمامية</td>
+                <td>5 ميجابكسل (f/2.2)، دعم HDR وتصوير 1080p@30fps</td>
+            </tr>
+            <tr>
+                <td>البطارية</td>
+                <td>5000 مللي أمبير، شحن 10 واط</td>
+            </tr>
+            <tr>
+                <td>نظام التشغيل</td>
+                <td>Android 14 مع واجهة MIUI</td>
+            </tr>
+            <tr>
+                <td>الأبعاد والوزن</td>
+                <td>الوزن: 193 جرام (الأبعاد غير محددة)</td>
+            </tr>
+            <tr>
+                <td>مزايا إضافية</td>
+                <td>مستشعر بصمة جانبي، NFC، مكبر صوت أحادي، USB Type-C 2.0 مع OTG</td>
+            </tr>
+            <tr>
+                <td>الألوان المتوفرة</td>
+                <td>الأسود الليلي، الأبيض القمري، الأخضر الشفاف</td>
+            </tr>
+            <tr style="color:red; font-weight: bold; font-size:25px;">
+             <td><strong> السعر </strong></td>
+             <td> 250,000 ج.س</td>             
+            </tr>
+        </table>
+
+
+#دائما_معاكم_في_القمة 🌟
+
+
+
+
+
+
+☎️للطلب المباشر اضغط هنا 👇🏽
+
+#الجودة_عالية_والسعر_رخيص
+              <br />
+              <br />
+             ملاحظة : سعر الهاتف نهائي و غير شامل التوصيل
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد حبات الهاتف ( تبدا من 1 ):</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()" required="required">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249903946264" target="_blank" class="whatsapp-btn">
+                طلب الهاتف عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

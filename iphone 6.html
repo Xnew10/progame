@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب Iphone 13</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #service-title {
+            text-align: center;
+            color: #1E2A38;
+    }
+    </style>
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، أريد طلب ${quantity} من هواتف: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249903946264?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img src="phones/i13.jpg" alt="صورة الخدمة">
+            <h2 id="service-title"> Iphone 13 </h2>
+            <p class="description">
+              <table>
+    <tr>
+        <th>المواصفات</th>
+        <th>التفاصيل</th>
+    </tr>
+    <tr>
+        <td><strong>الشاشة</strong></td>
+        <td>6.1 بوصة Super Retina XDR OLED، دعم HDR10 وDolby Vision، حماية Ceramic Shield</td>
+    </tr>
+    <tr>
+        <td><strong>المعالج</strong></td>
+        <td>Apple A15 Bionic</td>
+    </tr>
+    <tr>
+        <td><strong>الذاكرة العشوائية (RAM)</strong></td>
+        <td>4 جيجابايت</td>
+    </tr>
+    <tr>
+        <td><strong>التخزين الداخلي</strong></td>
+        <td>128 جيجابايت</td>
+    </tr>
+    <tr>
+        <td><strong>الكاميرا الخلفية</strong></td>
+        <td>رئيسية 12 ميجابكسل + واسعة للغاية 12 ميجابكسل</td>
+    </tr>
+    <tr>
+        <td><strong>البطارية</strong></td>
+        <td>3240 مللي أمبير، شحن سريع حتى 20 واط (Lightning)</td>
+    </tr>
+    <tr>
+        <td><strong>الأبعاد والوزن</strong></td>
+        <td>146.7 × 71.5 × 7.65 مم، وزن 174 جرام</td>
+    </tr>
+    <tr>
+        <td><strong>مقاومة الماء والغبار</strong></td>
+        <td>معيار IP68</td>
+    </tr>
+    <tr>
+        <td><strong>ألوان الهاتف</strong></td>
+        <td>Blue، Pink، Midnight، Starlight، Red، Green</td>
+    </tr>
+    <tr>
+        <td><strong>ميزات إضافية</strong></td>
+        <td>دعم شريحتين (Nano SIM + eSIM أو eSIM مزدوجة)، دعم 5G، نظام iOS 15 (قابل للترقية)</td>
+    </tr>
+</table>
+☎️للطلب المباشر اضغط هنا 👇🏽
+              <br />
+              <br />
+             ملاحظة : سعر الهاتف نهائي و غير شامل التوصيل
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد حبات الهاتف ( تبدا من1 ):</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249903946264" target="_blank" class="whatsapp-btn">
+                طلب الهاتف عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

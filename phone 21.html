@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب SmartBarry C89 & C94</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    #service-title{
+            text-align: center;
+            color: #1E2A38;
+    }
+  #whatsapp-button{
+    text-align: center;
+            color: white;
+  }
+    </style>
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، أريد طلب ${quantity} من ساعات: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249903946264?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img src="phones/Sw.jpg" alt="صورة الخدمة">
+            <h2 id="service-title"> SmartBarry C89 & C94 </h2>
+            <p class="description">  <table>
+        <tr>
+            <th>الميزة</th>
+            <th>الوصف</th>
+        </tr>
+        <tr>
+            <td>حجم الشاشة</td>
+            <td>شاشة لمس 2.2 إنش عالية الدقة</td>
+        </tr>
+        <tr>
+            <td>الذاكرة</td>
+            <td>تصل إلى 64GB، ورامات تصل إلى 4GB</td>
+        </tr>
+        <tr>
+            <td>دعم الشريحة</td>
+            <td>يدعم تركيب شريحة اتصال</td>
+        </tr>
+        <tr>
+            <td>التطبيقات</td>
+            <td>يدعم تنزيل تطبيقات مثل بنكك، فوري، واتساب، تيك توك.. إلخ</td>
+        </tr>
+        <tr>
+            <td>الشبكات</td>
+            <td>يدعم شبكات الجيل الخامس 5G</td>
+        </tr>
+        <tr>
+            <td>المميزات الذكية</td>
+            <td>حساب معدل نبضات القلب، مقاومة الماء، قياس نسبة الأكسجين في الدم، تتبع الرياضة</td>
+        </tr>
+        <tr>
+            <td>البطارية</td>
+            <td>بطارية تدوم معظم اليوم</td>
+        </tr>
+            <tr style="color:red; font-weight: bold; font-size:25px;">
+             <td><strong> السعر </strong></td>
+             <td> 180,000 ج.س</td>             
+            </tr>
+    </table>
+
+#دائما_معاكم_في_القمة 🌟
+
+
+
+☎️للطلب المباشر اضغط هنا 👇🏽
+
+#الجودة_عالية_والسعر_رخيص
+              <br />
+              <br />
+             ملاحظة : سعر الهاتف نهائي و غير شامل التوصيل
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد حبات الهاتف ( تبدا من 1 ):</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()" required="required">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249903946264" target="_blank" class="whatsapp-btn">
+                طلب الهاتف عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

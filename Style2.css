@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    direction: rtl;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#profile img {
+    width: 120px;  /* تقليل حجم الصورة */
+    height: 120px;
+    border-radius: 50%;  /* جعل الصورة دائرية */
+    border: 3px solid #007BFF;  /* إضافة إطار جميل */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    display: block;
+    margin: 0 auto 10px;  /* توسيط الصورة وإضافة مسافة */
+}
+
+h1 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+.services h2{
+    margin-top: 30px;
+}
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* توسيط العناصر */
+    gap: 15px; /* إضافة مسافة بين المربعات */
+}
+
+.service {
+    width: 300px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* زيادة ارتفاع المربع */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* للحفاظ على التناسق */
+    margin-top: 10px;
+}
+
+.service img {
+    width: 100%;
+    height: 250px; /* زيادة الارتفاع لاستيعاب صور الهواتف */
+    object-fit: contain; /* لضبط الصورة داخل الإطار دون قص */
+    border-radius: 8px;
+}
+
+.service h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.service p {
+    font-size: 14px;
+    color: #555;
+}
+
+.service .price {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+
+.service:hover {
+    transform: scale(1.05); /* تأثير تكبير خفيف عند التمرير */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+}
+
+/* .testimonials {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+.testimonial {
+    margin: 10px auto;
+    width: 80%;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+} */
+
+#testimonials {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+#testimonial-box {
+    width: 80%;
+    margin: 10px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+#add-review {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    width: 90%; /* تحديد العرض بنسبة 90% */
+    max-width: 600px; /* تحديد حد أقصى للعرض */
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#review-text, #review-author, #review-rating {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#user-reviews {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.review-box {
+    background: white;
+    padding: 15px;
+    margin: 10px auto;
+    width: 90%; /* جعل العنصر بعرض 90% من الصفحة */
+    max-width: 600px; /* تحديد حد أقصى للعرض */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.review-box:hover {
+    transform: scale(1.05);
+}
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+/* ✅ مقاس الشاشات من 1240px فأعلى */
+@media (min-width: 1240px) {
+    .container {
+        max-width: 800px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .price {
+        font-size: 20px;
+    }
+}
+
+/* ✅ مقاس الشاشات من 1024px إلى 1239px */
+@media (max-width: 1239px) {
+    .container {
+        max-width: 700px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    p {
+        font-size: 17px;
+    }
+    .price {
+        font-size: 19px;
+    }
+}
+
+/* ✅ مقاس الشاشات من 768px إلى 1023px */
+@media (max-width: 1023px) {
+    .container {
+        width: 95%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .service {
+        padding: 12px;
+    }
+    .price {
+        font-size: 18px;
+    }
+}
+
+/* ✅ مقاس الشاشات من 480px إلى 767px (أجهزة الجوال الكبيرة) */
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .service {
+        padding: 10px;
+    }
+    .price {
+        font-size: 17px;
+    }
+}
+
+/* ✅ مقاس الشاشات من 360px إلى 479px (أجهزة الجوال الصغيرة) */
+@media (max-width: 479px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .service {
+        padding: 8px;
+    }
+    .price {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب Galaxy S25 Ultra</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #service-title {
+            text-align: center;
+            color: #1E2A38;
+        }
+        #whatsapp-button{
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `السلام عليكم ورحمة الله و بركاته، أريد طلب ${quantity} من هواتف: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249903946264?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img src="phones/S25 ultra.png" alt="صورة الخدمة">
+            <h2 id="service-title"> Galaxy S25 Ultra </h2>
+            <p class="description"> <table>
+        <tr>
+            <th>المواصفات</th>
+            <th>التفاصيل</th>
+        </tr>
+        <tr>
+            <td><strong>الشاشة</strong></td>
+            <td>6.9 بوصة Dynamic AMOLED 2X، معدل تحديث 120Hz، حماية Corning® Gorilla® Armor 2</td>
+        </tr>
+        <tr>
+            <td><strong>المعالج</strong></td>
+            <td>Snapdragon® 8 Elite</td>
+        </tr>
+        <tr>
+            <td><strong>الذاكرة العشوائية (RAM)</strong></td>
+            <td>12 جيجابايت</td>
+        </tr>
+        <tr>
+            <td><strong>التخزين الداخلي</strong></td>
+            <td>256 جيجابايت / 512 جيجابايت</td>
+        </tr>
+        <tr>
+            <td><strong>الكاميرا الخلفية</strong></td>
+            <td>رئيسية 200 ميجابكسل + تليفوتوغرافي 3x بدقة 10 ميجابكسل + تليفوتوغرافي 5x بدقة 50 ميجابكسل</td>
+        </tr>
+        <tr>
+            <td><strong>البطارية</strong></td>
+            <td>5000 مللي أمبير، شحن سريع 31 واط</td>
+        </tr>
+        <tr>
+            <td><strong>الأبعاد والوزن</strong></td>
+            <td>162.8 × 77.6 × 8.2 مم، وزن 218 جرام</td>
+        </tr>
+        <tr>
+            <td><strong>مقاومة الماء والغبار</strong></td>
+            <td>معيار IP68</td>
+        </tr>
+        <tr>
+            <td><strong>ألوان الهاتف</strong></td>
+            <td>Titanium Black، Titanium White، Titanium Gray، Titanium Blue، Titanium Jadegreen، Titanium Pinkgold</td>
+        </tr>
+        <tr>
+            <td><strong>ميزات إضافية</strong></td>
+            <td>قلم S Pen مدمج، دعم Galaxy Watch & Ring</td>
+        </tr>
+        <tr style="color:red; font-weight: bold; font-size:25px;">
+             <td><strong> السعر </strong></td>
+             <td> 2,600,000 ج.س</td>             
+        </tr>
+    </table>
+
+☎️للطلب المباشر اضغط هنا 👇🏽
+              <br />
+              <br />
+             ملاحظة : سعر الهاتف نهائي و غير شامل التوصيل
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد حبات الهاتف ( تبدا من 1 ):</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()" required="required">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249903946264" target="_blank" class="whatsapp-btn">
+                طلب الهاتف عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>

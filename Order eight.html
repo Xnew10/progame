@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الخدمة</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        function updateWhatsAppLink() {
+            let quantity = document.getElementById("quantity").value;
+            let serviceName = document.getElementById("service-title").innerText;
+            let message = `مرحبًا، أريد طلب ${quantity} من خدمة: ${serviceName}`;
+            let whatsappLink = `https://wa.me/249903946264?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-button").href = whatsappLink;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section class="service-details">
+            <img src="img/Order eight/img.jpg" alt="صورة الخدمة">
+            <h2 id="service-title">حجز و إتمام عملية الزيارة العائلية للسعودية</h2>
+            <p class="description">  نقدم في هذه الخدمة عدة عروض للزيارة و العمرة بالنسبة لدولة المملكة العربية السعودية باسرع وقت ممكن
+              <br />
+              <br />
+             ملاحظة : قد تتاخر التاشيرة عدة أيام بسبب إزدحام الطلبات في هذه الأيام
+            </p>
+            
+            <div class="order-controls">
+                <label for="quantity">عدد الخدمات المطلوبة ( تبدا من1 ):</label>
+                <input type="number" id="quantity" min="1" onchange="updateWhatsAppLink()" required="required">
+            </div>
+
+            <a id="whatsapp-button" href="https://wa.me/249903946264" target="_blank" class="whatsapp-btn">
+                طلب الخدمة عبر واتساب
+            </a>
+        </section>
+    </div>
+</body>
+</html>
